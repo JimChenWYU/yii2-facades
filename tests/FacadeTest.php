@@ -34,7 +34,6 @@ class FacadeTest extends TestCase
 		'Redis' => 'redis',
 		'Request' => 'request',
 		'Response' => 'response',
-		'Router' => 'urlManager',
 		'Security' => 'security',
 		'Session' => 'session',
 		'Url' => 'urlManager',
