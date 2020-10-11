@@ -1,0 +1,36 @@
+{
+    "name": "jimchen/yii2-facades",
+    "description": "Laravel like facades support for Yii 2 application components",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JimChen",
+            "email": "imjimchen@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "~2.0",
+        "sergeymakinen/yii2-tests": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "jimchen\\facade\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jimchen\\tests\\facade\\": "tests"
+        }
+    },
+    "extra": {
+        "bootstrap": "jimchen\\facade\\FacadeAlias"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
