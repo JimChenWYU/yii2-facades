@@ -29,6 +29,9 @@
     "extra": {
         "bootstrap": "jimchen\\facade\\FacadeAlias"
     },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
     "repositories": [
         {
             "type": "composer",
