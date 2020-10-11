@@ -27,7 +27,6 @@ class FacadeTest extends TestCase
 		'Db' => 'db',
 		'Error' => 'errorHandler',
 		'Formatter' => 'formatter',
-		'Http' => 'httpClient',
 		'I18n' => 'i18n',
 		'Log' => 'log',
 		'Mailer' => 'mailer',
