@@ -12,10 +12,10 @@ class FacadeTest extends TestCase
 	protected $config = [
 		'components' => [
 			'component' => [
-				'class' => 'sergeymakinen\tests\facades\mocks\Component',
+				'class' => 'jimchen\tests\facade\mocks\Component',
 			],
 			'component2' => [
-				'class' => 'sergeymakinen\tests\facades\mocks\Component2',
+				'class' => 'jimchen\tests\facade\mocks\Component2',
 			],
 		],
 	];
@@ -60,7 +60,7 @@ class FacadeTest extends TestCase
 	}
 
 	/**
-	 * @covers \sergeymakinen\facades\Facade::clearResolvedFacadeComponent
+	 * @covers \jimchen\facade\Facade::clearResolvedFacadeComponent
 	 */
 	public function testClearResolvedFacadeComponent()
 	{
@@ -68,8 +68,8 @@ class FacadeTest extends TestCase
 		ComponentFacade::method();
 		Component2Facade::getProperty();
 		Component2Facade::method();
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertArrayHasKey('component', $accessors);
 		$this->assertArrayHasKey('component2', $accessors);
 		$this->assertArrayHasKey('component', $components);
@@ -77,8 +77,8 @@ class FacadeTest extends TestCase
 
 		Facade::clearResolvedFacadeComponent('component');
 
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertArrayNotHasKey('component', $accessors);
 		$this->assertArrayHasKey('component2', $accessors);
 		$this->assertArrayNotHasKey('component', $components);
@@ -91,8 +91,8 @@ class FacadeTest extends TestCase
 		ComponentFacade::method();
 		Component2Facade::getProperty();
 		Component2Facade::method();
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertArrayHasKey('component', $accessors);
 		$this->assertArrayHasKey('component2', $accessors);
 		$this->assertArrayHasKey('component', $components);
@@ -100,8 +100,8 @@ class FacadeTest extends TestCase
 
 		Facade::clearResolvedFacadeComponents();
 
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertEmpty($accessors);
 		$this->assertEmpty($components);
 	}
@@ -114,7 +114,7 @@ class FacadeTest extends TestCase
 
 	public function testGetFacadeApplication()
 	{
-		$this->setInaccessibleProperty('sergeymakinen\facades\Facade', '_app', null);
+		$this->setInaccessibleProperty('jimchen\facade\Facade', '_app', null);
 		$this->assertSame(\Yii::$app, ComponentFacade::getFacadeApplication());
 	}
 
@@ -125,8 +125,8 @@ class FacadeTest extends TestCase
 		ComponentFacade::method();
 		Component2Facade::getProperty();
 		Component2Facade::method();
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertArrayHasKey('component', $accessors);
 		$this->assertArrayHasKey('component2', $accessors);
 		$this->assertArrayHasKey('component', $components);
@@ -141,8 +141,8 @@ class FacadeTest extends TestCase
 		$this->assertNotSame(\Yii::$app, Facade::getFacadeApplication());
 
 		Facade::setFacadeApplication(\Yii::$app);
-		$accessors = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_accessors');
-		$components = $this->getInaccessibleProperty('sergeymakinen\facades\Facade', '_components');
+		$accessors = $this->getInaccessibleProperty('jimchen\facade\Facade', '_accessors');
+		$components = $this->getInaccessibleProperty('jimchen\facade\Facade', '_components');
 		$this->assertEmpty($accessors);
 		$this->assertEmpty($components);
 		$this->assertSame(\Yii::$app->get('component'), ComponentFacade::getFacadeComponent());
@@ -178,16 +178,16 @@ class FacadeTest extends TestCase
 
 	public function testPrivateConstruction()
 	{
-		$this->assertFalse((new \ReflectionMethod('sergeymakinen\tests\facades\mocks\ComponentFacade', '__construct'))->isPublic());
-		$this->assertFalse((new \ReflectionMethod('sergeymakinen\tests\facades\mocks\ComponentFacade', '__clone'))->isPublic());
-		$this->assertFalse((new \ReflectionMethod('sergeymakinen\tests\facades\mocks\ComponentFacade', '__wakeup'))->isPublic());
+		$this->assertFalse((new \ReflectionMethod('jimchen\tests\facade\mocks\ComponentFacade', '__construct'))->isPublic());
+		$this->assertFalse((new \ReflectionMethod('jimchen\tests\facade\mocks\ComponentFacade', '__clone'))->isPublic());
+		$this->assertFalse((new \ReflectionMethod('jimchen\tests\facade\mocks\ComponentFacade', '__wakeup'))->isPublic());
 	}
 
 	public function testMappings()
 	{
 		foreach ($this->mappings as $className => $id) {
 			/** @var Facade $class */
-			$class = 'sergeymakinen\facades\\' . $className;
+			$class = 'jimchen\facade\\' . $className;
 			$this->assertEquals($id, $class::getFacadeComponentId());
 		}
 	}
