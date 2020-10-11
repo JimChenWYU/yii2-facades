@@ -4,6 +4,7 @@ namespace jimchen\facade;
 
 use yii\base\BootstrapInterface;
 use yii\base\Component;
+use yii\web\ErrorHandler;
 
 class FacadeAlias extends Component implements BootstrapInterface
 {
@@ -14,7 +15,7 @@ class FacadeAlias extends Component implements BootstrapInterface
 		'Auth' => 'jimchen\facade\Auth',
 		'Cache' => 'jimchen\facade\Cache',
 		'Db' => 'jimchen\facade\Db',
-		'Error' => 'jimchen\facade\Error',
+		'Errorhandler' => 'jimchen\facade\Error',
 		'Formatter' => 'jimchen\facade\Formatter',
 		'I18n' => 'jimchen\facade\I18n',
 		'Log' => 'jimchen\facade\Log',
