@@ -2,8 +2,8 @@
 
 namespace jimchen\tests\facade;
 
-use sergeymakinen\facades\Facade;
-use sergeymakinen\facades\Response;
+use jimchen\facade\Facade;
+use jimchen\facade\Response;
 use yii\helpers\Url;
 
 class ResponseTest extends TestCase

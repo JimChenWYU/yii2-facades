@@ -5,7 +5,7 @@ namespace jimchen\tests\facade;
 use jimchen\tests\facade\mocks\Component;
 use jimchen\tests\facade\mocks\Component2Facade;
 use jimchen\tests\facade\mocks\ComponentFacade;
-use sergeymakinen\facades\Facade;
+use jimchen\facade\Facade;
 
 class FacadeTest extends TestCase
 {
