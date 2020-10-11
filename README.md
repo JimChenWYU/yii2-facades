@@ -2,7 +2,7 @@
 
 Laravel like facades support for Yii 2 application components. Just what you want: simple, extensive and with an IDE auto completion support via [PHPDoc](https://www.phpdoc.org) so you won't be disappointed.
 
-[![Packagist Version](https://img.shields.io/packagist/v/JimChenWYU/yii2-facades.svg?style=flat-square)](https://packagist.org/packages/JimChenWYU/yii2-facades) [![Total Downloads](https://img.shields.io/packagist/dt/JimChenWYU/yii2-facades.svg?style=flat-square)](https://packagist.org/packages/JimChenWYU/yii2-facades) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/JimChenWYU/yii2-facades.svg?style=flat-square)](https://packagist.org/packages/jimchen/yii2-facades) [![Total Downloads](https://img.shields.io/packagist/dt/JimChenWYU/yii2-facades.svg?style=flat-square)](https://packagist.org/packages/jimchen/yii2-facades) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 ## Table of contents
 
@@ -135,11 +135,6 @@ YourFacadeName::setFoo($value)
 <td><code>Formatter</code></td>
 <td><code>Yii::$app->formatter</code></td>
 <td><code>yii\i18n\Formatter</code></td>
-</tr>
-<tr>
-<td><code>Http</code></td>
-<td><code>Yii::$app->httpClient</code></td>
-<td><code>yii\httpclient\Client</code></td>
 </tr>
 <tr>
 <td><code>I18n</code></td>
