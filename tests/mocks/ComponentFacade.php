@@ -2,7 +2,7 @@
 
 namespace jimchen\tests\facade\mocks;
 
-use sergeymakinen\facades\Facade;
+use jimchen\facade\Facade;
 
 /**
  * @method static mixed method(mixed $input = null)

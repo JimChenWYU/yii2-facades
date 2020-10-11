@@ -38,7 +38,7 @@ composer require jimchen/yii2-facades
 
 ## Usage
 
-Basically you install the extension and start using it like you do with all normal Yii 2 application components but with a shorter simpler syntax, let's take a look (in case you wonder, all default facades, including an abstract base `Facade` reside under a `sergeymakinen\facades` namespace):
+Basically you install the extension and start using it like you do with all normal Yii 2 application components but with a shorter simpler syntax, let's take a look (in case you wonder, all default facades, including an abstract base `Facade` reside under a `jimchen\facades` namespace):
 
 ### Generate random string
 
