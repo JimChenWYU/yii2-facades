@@ -4,7 +4,6 @@ namespace jimchen\facade;
 
 use yii\base\BootstrapInterface;
 use yii\base\Component;
-use yii\web\ErrorHandler;
 
 class FacadeAlias extends Component implements BootstrapInterface
 {
