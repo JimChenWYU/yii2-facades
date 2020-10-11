@@ -2,8 +2,8 @@
 
 namespace jimchen\tests\facade;
 
-use sergeymakinen\facades\Cache;
-use sergeymakinen\facades\Facade;
+use jimchen\facade\Cache;
+use jimchen\facade\Facade;
 
 class CacheTest extends TestCase
 {

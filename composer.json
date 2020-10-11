@@ -14,7 +14,7 @@
         "yiisoft/yii2": "~2.0"
     },
     "require-dev": {
-        "sergeymakinen/yii2-tests": "^2.2"
+        "sergeymakinen/yii2-tests": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -28,6 +28,9 @@
     },
     "extra": {
         "bootstrap": "jimchen\\facade\\FacadeAlias"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
     },
     "repositories": [
         {
