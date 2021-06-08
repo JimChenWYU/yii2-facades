@@ -26,9 +26,6 @@
             "jimchen\\tests\\facade\\": "tests"
         }
     },
-    "extra": {
-        "bootstrap": "jimchen\\facade\\FacadeAlias"
-    },
     "scripts": {
         "test": "./vendor/bin/phpunit"
     },

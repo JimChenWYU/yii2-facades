@@ -5,6 +5,10 @@ namespace jimchen\facade;
 use yii\base\BootstrapInterface;
 use yii\base\Component;
 
+/**
+ * @deprecated
+ * Class FacadeAlias
+ */
 class FacadeAlias extends Component implements BootstrapInterface
 {
 	/**
